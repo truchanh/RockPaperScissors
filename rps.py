@@ -1,23 +1,18 @@
 """
-simple rock, paper, scissors
-programmer:
-	truchanh
-email:
-	dangthitruchanh10a03@gmail.com
+simple rock, paper, scrissors
 """
 import random as rd
 
 choices = ['rock', 'paper', 'scissors']
 
-# there are two ways to get input from the user
+# there are many ways to get input from the user
 # I have defined both function that works perfectly!
-
-
 def get_user_input1():
 	"""first approach"""
 	while 1:
 		uc = int(input('Enter:\n\t1. for rock\n\t2. for paper\n\t3. for scissors\n> '))
 		if uc in (1, 2, 3): break
+		else: continue
 	return choices[uc-1]
 
 
@@ -28,6 +23,7 @@ def get_user_input2():
 		for choice in choices:
 			if choice.startswith(uc.lower()): 
 				return choice
+			else: continue
 
 
 def get_comp_input():
